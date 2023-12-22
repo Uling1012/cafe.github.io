@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Menu</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <!-- vender -->
+    <link rel="stylesheet" href="./vender/OwlCarousel2-2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./vender/OwlCarousel2-2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./vender/fancybox3/jquery.fancybox.min.css">
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="login">
+                    <h5 class="modal-title" id="exampleModalLabel">登入/註冊</h5>
+                    <div id="firebaseui-auth-container"></div>
+                </div>
+                <div class="login-success">
+                    <h3 class="modal-title" id="exampleModalLabel">登入成功</h3>
+                </div>
+                <div class="logout-success">
+                    <h3 class="modal-title" id="exampleModalLabel">登出成功</h3>
+                </div>
+                <div id="loader">Loading...</div>
+            </div>           
+        </div>
+    </div>
+</div>
+<div class="wrapper">
+    <!-- start header -->
+    <header class="header">
+        <div class="navbar">
+            <div class="container">
+                <a href="#!" class="logo"><h1>Rimoo Cafe</h1></a>
+                <!-- <ul id="open" class="nav "> -->
+                <ul id="nav" class="nav">
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">關於</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#service" class="nav-link">服務</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#reservation" class="nav-link">訂位</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#menu" class="nav-link">菜單</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">聯絡</a>
+                    </li>
+                    <li class="nav-item other">
+                        <a href="evaluation.html" class="nav-link">評價</a>
+                    </li>
+                    <!-- <a href="#!" class="nav-close large-hidden">
+                        <span></span>
+                        <span></span>
+                    </a> -->
+                    <li class="nav-item unauth other">
+                        <a id="login" class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal">登入/註冊</a>
+                    </li>
+                    <li class="nav-item auth other">
+                        <a id="logout" class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal">登出</a>
+                    </li>
+                    <!-- Button trigger modal -->
+                    <!-- <li>
+                        <button type="button" class="btn btn1" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Launch demo modal
+                        </button>
+                    </li> -->
+                
+                </ul>
+
+                <!-- <a href="#open" class="nav-toggle large-hidden"> -->
+                <a href="#!" class="nav-toggle large-hidden">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- end header -->
+
+    <!-- start main -->
+    <section class="main">
+
+        <!-- start jumbotron -->
+        <div class="jumbotron">
+            <div class="mask"></div>
+            <div class="container slideUp">
+                <div class="logo-image">
+                    <img src="./images/common/logo-w.png" alt="logo-w" class="image">
+                </div>
+                <div class="button-group">
+                    <a href="#!" class="btn btn-large btn1">Join Us !</a>
+                    <a href="#!" class="btn btn-large btn2">Okay ~</a>
+                </div>
+            </div>
+        </div>
+        <!-- end jumbotron -->
+        <!-- start about -->
+        <div id="about" class="about hero hero-white">
+        <img class="rellax rellax-1" data-rellax-speed="-2" src="./images/parallax/001.png" alt="001">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-lg-6 col-md-12 slideRight">
+                        <div class="info-group">
+                            <h4 class="info-title">Lorem ipsum dolor amet.</h4>
+                            <p class="info-para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque quod expedita ullam mollitia debitis ducimus quo non aut odit sapiente perspiciatis voluptates quidem, consectetur quam.Atque quod expedita ullam mollitia debitis ducimus quo non aut odit sapiente perspiciati.</p>
+                            <a href="" class="btn btn1">Read More</a>
+                        </div>
+                    </div
+                    ><div class="col col-lg-6 col-md-12 slideLeft">
+                        <div class="img-container">
+                            <img src="./images/products/product005.jpg" alt="product005" class="image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end about -->
+        <!-- start service -->
+        <div id="service" class="service hero hero-grey">
+        <img class="rellax rellax-2" data-rellax-speed="-2" src="./images/parallax/002.png" alt="002">
+            <div class="container">
+                <h2 class="title slideUp">SERVICES</h2>
+                <p class="para slideUp">Lorem ipsum dolor sit amet consectetur adipisicing <br> Sit amet molestias mollitia minus ullam labore!</p>
+                <div class="row product-group">
+                    <div class="col col-lg-4 col-md-6 col-sm-12">
+                        <div class="product">
+                            <div class="img-container">
+                                <img src="./images/products/product001.jpg" alt="product001" class="image">
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Lorem ipsum dolor sit amet...</h4>
+                                <h4 class="product-title">Lorem ipsum dolor sit amet.</h4>
+                                <p class="product-des">Lorem ipsum dolor sit amet, adipisicing elit. Dicta, tenetur natus dolores atque, voluptatum animi distinctio ut perspiciatis, aliquam possimus ratione voluptates. Veritatis aperiam voluptate</p>
+                                <a href="#!" class="btn btn2">Read More</a>
+                            </div>
+                        </div>
+                    </div
+                    ><div class="col col-lg-4 col-md-6 col-sm-12">
+                        <div class="product">
+                            <div class="img-container">
+                                <img src="./images/products/product002.jpg" alt="product002" class="image">
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Lorem ipsum dolor sit amet...</h4>
+                                <h4 class="product-title">Lorem ipsum dolor sit amet.</h4>
+                                <p class="product-des">Lorem ipsum dolor sit amet, adipisicing elit. Dicta, tenetur natus dolores atque, voluptatum animi distinctio ut perspiciatis, aliquam possimus ratione voluptates. Veritatis aperiam voluptate</p>
+                                <a href="#!" class="btn btn2">Read More</a>
+                            </div>
+                        </div>
+                    </div
+                    ><div class="col col-lg-4 col-md-6 col-sm-12">
+                        <div class="product">
+                            <div class="img-container">
+                                <img src="./images/products/product003.jpg" alt="product003" class="image">
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Lorem ipsum dolor sit amet...</h4>
+                                <h4 class="product-title">Lorem ipsum dolor sit amet.</h4>
+                                <p class="product-des">Lorem ipsum dolor sit amet, adipisicing elit. Dicta, tenetur natus dolores atque, voluptatum animi distinctio ut perspiciatis, aliquam possimus ratione voluptates. Veritatis aperiam voluptate</p>
+                                <a href="#!" class="btn btn2">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- end service -->
+        <!-- start reservation -->
+        <div id="reservation" class="reservation hero">
+            <div class="mask"></div>
+            <img class="rellax rellax-3" data-rellax-speed="-2" src="./images/parallax/003.png" alt="003">
+            <div class="container">
+                <h2 class="title slideUp">RESERVATION</h2>
+                <p class="para slideUp">Lorem ipsum dolor sit amet consectetur adipisicing <br> Sit amet molestias mollitia minus ullam labore!</p>
+                <a href="" class="btn btn-large btn1 slideUp">Booking</a>
+            </div>
+        </div>
+        <!-- end reservation -->
+        <!-- start menu -->
+        <div id="menu" class="menu hero hero-white">
+            <img class="rellax rellax-4" data-rellax-speed="-2" src="./images/parallax/004.png" alt="004">
+            <div class="container">
+                <h2 class="title slideUp">MENU</h2>
+                <p class="para slideUp">Lorem ipsum dolor sit amet consectetur adipisicing <br> Sit amet molestias mollitia minus ullam labore!</p>
+                <!-- only for member -->
+                <div class="product-group slideUp auth">
+                    <div class="list-name">MEMBER ONLY</div>
+                    <a href="#!" class="btn btn2 list-btn large-show">more</a>
+                    <div class="owl-carousel owl-theme">
+                        <a href="./images/products/product005.jpg" data-fancybox="gallery">
+                            <div class="product">
+                                <div class="img-container">
+                                    <div class="image" style="background-image: url(./images/products/product005.jpg);"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h4 class="product-name">Lorem ipsum dolor sit amet.</h4>
+                                    <h4 class="product-title">Lorem ipsum dolor sit.</h4>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./images/products/product006.jpg" data-fancybox="gallery">
+                            <div class="product">
+                                <div class="img-container">
+                                    <div class="image" style="background-image: url(./images/products/product006.jpg);"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h4 class="product-name">Lorem ipsum dolor sit amet.</h4>
+                                    <h4 class="product-title">Lorem ipsum dolor sit.</h4>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./images/products/product007.jpg" data-fancybox="gallery">
+                            <div class="product">
+                                <div class="img-container">
+                                    <div class="image" style="background-image: url(./images/products/product007.jpg);"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h4 class="product-name">Lorem ipsum dolor sit amet.</h4>
+                                    <h4 class="product-title">Lorem ipsum dolor sit.</h4>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./images/products/product008.jpg" data-fancybox="gallery">
+                            <div class="product">
+                                <div class="img-container">
+                                    <div class="image" style="background-image: url(./images/products/product008.jpg);"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h4 class="product-name">Lorem ipsum dolor sit amet.</h4>
+                                    <h4 class="product-title">Lorem ipsum dolor sit.</h4>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./images/products/product005.jpg" data-fancybox="gallery">
+                            <div class="product">
+                                <div class="img-container">
+                                    <div class="image" style="background-image: url(./images/products/product005.jpg);"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h4 class="product-name">Lorem ipsum dolor sit amet.</h4>
+                                    <h4 class="product-title">Lorem ipsum dolor sit.</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <a href="#!" class="btn btn2 list-btn large-hidden">more</a>
+                </div>
+
+                <div class="product-group slideUp">
+                    <div class="list-name">Coffee & Beverage</div>
+                    <a href="#!" class="btn btn2 list-btn large-show">more</a>
+                    <div class="owl-carousel owl-theme">
+                        <a href="./images/products/product005.jpg" data-fancybox="gallery">
+                            <div class="product">
+                                <div class="img-container">
+                                    <div class="image" style="background-image: url(./images/products/product005.jpg);"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h4 class="product-name">Lorem ipsum dolor sit amet.</h4>
+                                    <h4 class="product-title">Lorem ipsum dolor sit.</h4>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./images/products/product006.jpg" data-fancybox="gallery">
+                            <div class="product">
+                                <div class="img-container">
+                                    <div class="image" style="background-image: url(./images/products/product006.jpg);"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h4 class="product-name">Lorem ipsum dolor sit amet.</h4>
+                                    <h4 class="product-title">Lorem ipsum dolor sit.</h4>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./images/products/product007.jpg" data-fancybox="gallery">
+                            <div class="product">
+                                <div class="img-container">
+                                    <div class="image" style="background-image: url(./images/products/product007.jpg);"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h4 class="product-name">Lorem ipsum dolor sit amet.</h4>
+                                    <h4 class="product-title">Lorem ipsum dolor sit.</h4>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./images/products/product008.jpg" data-fancybox="gallery">
+                            <div class="product">
+                                <div class="img-container">
+                                    <div class="image" style="background-image: url(./images/products/product008.jpg);"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h4 class="product-name">Lorem ipsum dolor sit amet.</h4>
+                                    <h4 class="product-title">Lorem ipsum dolor sit.</h4>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./images/products/product005.jpg" data-fancybox="gallery">
+                            <div class="product">
+                                <div class="img-container">
+                                    <div class="image" style="background-image: url(./images/products/product005.jpg);"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h4 class="product-name">Lorem ipsum dolor sit amet.</h4>
+                                    <h4 class="product-title">Lorem ipsum dolor sit.</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <a href="#!" class="btn btn2 list-btn large-hidden">more</a>
+                </div>
+                <div class="product-group slideUp">
+                    <div class="list-name">Coffee & Beverage</div>
+                    <a href="#!" class="btn btn2 list-btn large-show">more</a>
+                    <div class="owl-carousel owl-theme">
+                        <div class="product">
+                            <div class="img-container">
+                                <div class="image" style="background-image: url(./images/products/product005.jpg);"></div>
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Lorem ipsum dolor sit amet.</h4>
+                                <h4 class="product-title">Lorem ipsum dolor sit.</h4>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="img-container">
+                                <div class="image" style="background-image: url(./images/products/product006.jpg);"></div>
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Lorem ipsum dolor sit amet.</h4>
+                                <h4 class="product-title">Lorem ipsum dolor sit.</h4>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="img-container">
+                                <div class="image" style="background-image: url(./images/products/product007.jpg);"></div>
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Lorem ipsum dolor sit amet.</h4>
+                                <h4 class="product-title">Lorem ipsum dolor sit.</h4>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="img-container">
+                                <div class="image" style="background-image: url(./images/products/product008.jpg);"></div>
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Lorem ipsum dolor sit amet.</h4>
+                                <h4 class="product-title">Lorem ipsum dolor sit.</h4>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="img-container">
+                                <div class="image" style="background-image: url(./images/products/product005.jpg);"></div>
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Lorem ipsum dolor sit amet.</h4>
+                                <h4 class="product-title">Lorem ipsum dolor sit.</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#!" class="btn btn2 list-btn large-hidden">more</a>
+                </div>
+                
+            </div>
+        </div>
+        <!-- end menu -->
+        <!-- start contact -->
+        <div id="contact" class="contact hero hero-grey">
+            <img class="rellax rellax-5" data-rellax-speed="-2" src="./images/parallax/005.png" alt="005">
+            <div class="container">
+                <h2 class="title slideUp">CONTACT</h2>
+                <p class="para slideUp">Lorem ipsum dolor sit amet consectetur adipisicing <br> Sit amet molestias mollitia minus ullam labore!</p>
+                <div class="row">
+                    <div class="col col-lg-6 col-md-12">
+                        <div class="contact-group slideRight">
+                            <div class="contact-item">
+                                <div class="contact-title">PHONE & TEL</div>
+                                <div class="contact-info">0900-000-000</div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-title">LOCATION</div>
+                                <div class="contact-info">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-title">HOURS</div>
+                                <div class="contact-info">11:00 ~ 18:00</div>
+                            </div>
+                        </div>
+                    </div
+                    ><div class="col col-lg-6 col-md-12">
+                        <div class="contact-map slideLeft">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.0095426704297!2d120.32421761067988!3d22.616118831288567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e04a4028a9139%3A0x4fa22084a5d31645!2z5pel5rKQ5ZKW5ZWh!5e0!3m2!1szh-TW!2stw!4v1697365637594!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end contact -->
+
+    </section>
+    <!-- end main -->
+
+    <!-- start footer -->
+    <footer class="footer">
+        <div class="mask"></div>
+        <img class="rellax rellax-6" data-rellax-speed="-2" src="./images/parallax/006.png" alt="006">
+        <div class="container">
+            <div class="logo-image slideUp">
+                <img src="./images/common/logo-w.png" alt="logo-w" class="image">
+            </div>
+            <ul class="nav slideUp">
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#service" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#reservation" class="nav-link">Reservation</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu" class="nav-link">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <img class="rellax rellax-7" data-rellax-speed="-2" src="./images/parallax/007.png" alt="007">
+        <div class="copyright">@ Copyright 2020 All rights reserved</div>
+    </footer>
+    <!-- end footer -->
+</div>
+    <!-- JS -->
+    <script src="vender/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="vender/OwlCarousel2-2.3.4/owl.carousel.min.js"></script>
+    <script src="vender/Vide-0.5.1/jquery.vide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="./vender/fancybox3/jquery.fancybox.min.js"></script>
+    <script src="./vender/onepagenav.js"></script>
+    <!-- firebase js -->
+    <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+    <script src="./firebaseConfig.js"></script>
+    <script src="./all.js"></script>
+
+</body>
+</html>
+
